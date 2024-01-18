@@ -1,0 +1,85 @@
+/* /*
+ Important To Know
+
+Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) {...}
+
+Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {...}
+
+Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {...}
+
+Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {...}
+
+Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {...}
+
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30%;
+    padding-left: 20%;
+}
+
+@media only screen and (min-width: 768px) {
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 7.5%;
+        padding-left: 5%;
+    }
+}
+
+
+.logocontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+}
+
+.log{
+    height: 40px;
+    width: 40px;
+    border-radius: 7px;
+}
+
+.urls{
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    .urls{
+        display: none;
+    }
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.links li{
+    display: inline;
+}
+
+.links li a{
+    text-decoration: none;
+    color: black;
+}
+
+.active{
+    font-size: 18px;
+    font-weight: bold;
+} */

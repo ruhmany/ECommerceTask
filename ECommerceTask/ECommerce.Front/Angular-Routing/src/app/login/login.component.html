@@ -1,0 +1,44 @@
+<!-- <div class="container">
+    <div class="d-flex flex-sm-row flex-column justify-content-between align-items-center">
+        <img class="d-sm-block d-none col-sm-12 col-md-5" src=" ../../assets/images/login.png" alt="">
+        <div class="px-3 container col-sm-12 col-md-5">
+            <div class="mb-3">
+                <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="usernameOrEmail" ]
+                    placeholder="name@example.com">
+            </div>
+
+            <div class="mb-3
+            ">
+                <input type="password" class="form-control" id="exampleFormControlInput2" [(ngModel)]="password" ]
+                    placeholder="**********">
+            </div>
+
+            <div class="d-flex flex-sm-row justify-content-between w-75 align-items-center">
+                <p class="fs-6"> <span><a class="link-primary text-decoration-none text-start" href="">Forget
+                            Password</a></span>
+                </p>
+            </div>
+            <button type="button" class="btn btn-primary w-100" (onclick)="login()">Login</button>
+            <hr>
+            <p class="fs-6" style="--bs-text-opacity: .4;">Don't have an account?, go to <span><a
+                        class="link-primary text-decoration-none text-start" href="">register</a></span> page and create
+                a new one.</p>
+        </div>
+    </div>
+</div>
+ -->
+
+<form [formGroup]="form" class="container d-flex flex-column gap-3 min-vh-100 justify-content-center"
+    (submit)="login()">
+    <div class="form-floating">
+        <input formControlName="email" type="email" class="form-control shadow-sm" id="floatingInput"
+            placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+        <input formControlName="password" type="password" class="form-control shadow-sm" id="floatingPassword"
+            placeholder="Password">
+        <label for="floatingPassword">Password</label>
+    </div>
+    <button class="btn btn-primary w-100 py-2 shadow-sm" type="submit" [disabled]="form.invalid">Sign in</button>
+</form>

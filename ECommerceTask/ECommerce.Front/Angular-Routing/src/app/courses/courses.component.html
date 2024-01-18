@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <div class="row d-flex">
+        <div class="col-lg-3 col-md-4 col-sm-12 mb-3 d-flex align-items-stretch" *ngFor="let course of products">
+            <div class="card d-flex flex-column">
+                <img class="card-img-top h-50 rounded-bottom-0 border-bottom" [src]="course.imagePath" alt="">
+                <div class="card-body">
+                    <h3 class="card-title text-truncate">{{course.name}}</h3>
+                    <p class="card-text text-truncate-3">{{course.category}}</p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <button class="btn btn-primary" (click)="NavToCourse(course.code)">More Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary w-100 py-2 shadow-sm" type="submit">Prev</button>
+    <button class="btn btn-primary w-100 py-2 shadow-sm" type="submit">Next</button>
+</div>
